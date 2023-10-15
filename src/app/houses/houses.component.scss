@@ -1,0 +1,24 @@
+mat-toolbar-row{
+    display:block;
+    padding: 10px;
+    mat-toolbar{
+        display:flex;
+    }
+    mat-list{
+        padding: 20px;
+    }
+    h3{
+        font-size: 20px;
+        margin: 10px;
+        color: whitesmoke;
+        font-weight: bolder;
+        background-color: darkseagreen;
+        padding: 10px;
+    }
+}
+#Add-House{
+    margin: 30px;
+    mat-form-field{
+        margin: 10px;
+    }
+}

@@ -1,0 +1,40 @@
+<div class="container">
+  <mat-toolbar>HOUSES RECORDS</mat-toolbar>
+
+  <div id="gethousediv" class="table-responsive">
+    <table class="table table-hover table-striped table-bordered" *ngIf="house.length">
+      <thead>
+        <tr>
+          <th>LGA</th>
+          <th>HouseNo</th>
+          <th>image</th>
+          <th>House-Type</th>
+          <th>Sell/Rent</th>
+          <th>Price</th>
+          <th>FullName</th>
+          <th>ContactNo</th>
+          <th>ContactAddress</th>
+          <th>NextOfKin</th> 
+          <th>HouseCondition</th>
+          <th>Asking_Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let home of house">
+          <td>{{home.LGA}}</td>
+          <td>{{home.HouseNo}}</td>
+          <td>{{home.ImageUrl}}</td>
+          <td>{{home.HouseType}}</td>
+          <td>{{home.Sell_rent}}</td>
+          <td>{{home.Price}}</td>
+          <td>{{home.FullName}}</td>
+          <td>{{home.ContactNo}}</td>
+          <td>{{home.ContactAddress}}</td>
+          <td>{{home.NextOfKin}}</td>
+          <td>{{home.HouseCondition}}</td>
+          <td>{{home.AskingPrice}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

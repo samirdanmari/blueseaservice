@@ -1,0 +1,30 @@
+[
+    {
+        "LGA": "Dala",
+        "HouseNo": "kaiagma193",
+        "ImageUrl": "",
+        "HouseType": "duplex",
+        "Sell_rent": false,
+        "Price": 350000,
+        "FullName": "Mubarak-musa",
+        "ContactNo": "0902132445",
+        "ContactAddress": "gwale,190",
+        "NextOfKin": "Musbahu",
+        "HouseCondition": "Neat",
+        "AskingPrice": 40000
+    },
+    {
+        "LGA": "Fagge",
+        "HouseNo": "darma12",
+        "ImageUrl": "",
+        "HouseType": "flat",
+        "Sell_rent": false,
+        "Price": 250000,
+        "FullName": "Mubarak-musa",
+        "ContactNo": "0902132445",
+        "ContactAddress": "fagge34",
+        "NextOfKin": "Isa_musa",
+        "HouseCondition": "Neat",
+        "AskingPrice": 400000
+    }
+]

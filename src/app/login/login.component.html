@@ -1,0 +1,26 @@
+
+<div class="row" class="signin-content">
+<mat-card>
+    <mat-card-header id="loginheader">
+        <h4>Admin Login</h4>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="Form" (ngOnSubmit)="onSubmit">
+        <div class="row">
+            <mat-form-field class="full-width-input">
+                <input matInput placeholder="User" formControlName="userName" required>
+              </mat-form-field>
+            </div>
+        <div class="row">
+        <mat-form-field class="full-width-input">
+            <input matInput type="password" placeholder="Password" formControlName="password" required>
+          </mat-form-field>
+          </div>
+          <button mat-raised-button id="loginbutton" [routerLink]="['/home']">Login</button>
+        </form>
+    </mat-card-content>     
+</mat-card>
+</div>
+<!--login card to which will have two diffe rnet sect of login 1. admin 2.super admin(high rank manager)-->
+<!--footer will consist of queary tab and dev sign and brand name-->
+<div >

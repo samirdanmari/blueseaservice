@@ -1,0 +1,126 @@
+<!--MA TOOL BAR WILL BE ADDED TO DISPLAY THE TITLE WILL OCCUPY 1/3 SPACE OF SIDE PAGE THE REMAINING 2/3 WILL BE DISPLAYING AVAILABLE HOUSES THET ARE NOT RENTED-->
+<div class="container">
+<body>
+  <div class="row">
+    <div id="Search">
+    <mat-form-field>
+      <mat-label>Search</mat-label>
+      <input matInput placeholder="Search" >
+  </mat-form-field>
+</div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+      <section class="firstCard">
+      <mat-card class="addclient" >
+        <mat-card-header>
+          <h3>TO LET</h3>
+        </mat-card-header>
+        <mat-card-subtitle>
+          <h4>ADD_CLIENT</h4>
+        </mat-card-subtitle>
+
+        <mat-card-content>
+          <mat-form-field>
+            <mat-label>Fullname</mat-label>
+            <input type="text" matInput placeholder="fullName" [(ngModel)]='fullname'/>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>House_No</mat-label>
+            <input type="text" matInput placeholder="House_No" [(ngModel)]='houseNo'/>
+          </mat-form-field>
+      
+          <mat-form-field>
+            <mat-label>House_Address</mat-label>
+            <input type="text" matInput placeholder="House_Address" [(ngModel)]='houseAddress'/>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Price</mat-label>
+            <input type="number" matInput placeholder="price" [(ngModel)]='price'/>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>AmountPaid</mat-label>
+            <input type="number" matInput placeholder="AmountPaid" [(ngModel)]='amountPaid'/>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Balance</mat-label>
+            <input type="number" matInput placeholder="Balance" [(ngModel)]='balance'/>
+          </mat-form-field>
+       
+          <mat-form-field>
+            <mat-label>Duration</mat-label>
+            <input type="text" matInput placeholder="duration" [(ngModel)]='duration'/>
+          </mat-form-field>
+
+          <mat-divider></mat-divider>
+
+          <button mat-raised-button id="saveButton">Save</button>
+
+        </mat-card-content>
+      </mat-card>
+    </section>
+  </div>
+  <div class="col-lg-6">
+      <!--CARD TO DISPLAY EXPIRED CONTARCTS IN SORTIN OREDER OF OLDEST EXPIRED CONTARACD-->
+
+     <section class="secondCard">
+      <mat-card>
+        <mat-card-header>
+          <h3>Clients</h3>
+        </mat-card-header>
+        <mat-card-subtitle>
+          <h4>Clients-Data</h4>
+        </mat-card-subtitle>
+        <mat-card-content>
+          <div class="table-responsive">
+         <table *ngIf="clients.length" class="table table-hover table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>Fullname</th>
+              <th>HouseNo</th>
+              <th>HouseAddress</th>
+              <th>price</th>
+              <th>AmountPaid</th>
+              <th>Balance</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let client of clients">
+              <td>{{client.fullName}}</td>
+              <td>{{client.houseNo}}</td>
+              <td>{{client.houseAddress}}</td>
+              <td>{{client.Price}}</td>
+              <td>{{client.AmountPaid}}</td>
+              <td>{{client.Balance}}</td>
+              <td>{{client.Duration}}</td>
+            </tr>
+             <!--ADDED DATA-->
+             <mat-toolbar id="newlydata">
+              <h4>Newly added</h4>
+             </mat-toolbar>
+              <tr>
+              <td>{{fullname}}</td>
+              <td>{{houseNo}}</td>
+              <td>{{houseAddress}}</td>
+              <td>{{price}}</td>
+              <td>{{amountPaid}}</td>
+              <td>{{balance}}</td>
+              <td>{{duration}}</td>
+              </tr>
+          </tbody>
+         </table>
+         </div>
+        </mat-card-content>
+      </mat-card>
+    </section>
+    </div>
+  </div>
+</body>
+</div>
+<!--SIDE NAV WHICH WILL CONSIST OF 3 BUTTONS 1.Client 2.HOUSES  3.OWE/RENT-->

@@ -1,0 +1,22 @@
+<div id="gethousediv" class="table-responsive">
+    <table class="table table-hover table-striped table-bordered" *ngIf="occupied.length">
+      <thead>
+        <tr>
+          <th>LGA</th>
+          <th>HouseNo</th>
+          <th>image</th>
+          <th>House-Type</th>
+          <th>ContactNo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let home of occupied">
+          <td>{{home.LGA}}</td>
+          <td>{{home.HouseNo}}</td>
+          <td>{{home.ImageUrl}}</td>
+          <td>{{home.HouseType}}</td>
+          <td>{{home.ContactNo}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
